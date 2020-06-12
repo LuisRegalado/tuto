@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#" routerLink="/home" width="30" height="30">
+    <img src="../../assets/img/A-64.png" height="30" width="30"> SpotifyStudents
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['home']"  >Home </a>
+      </li>
+      <li class="nav-item " routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['search']"  >Search </a>
+      </li>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input #termino type="text"  class="form-control" placeholder="Buscar Artista" >
+        <button (click)="buscar(termino.value)" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
+      </form>
+
+    </ul>
+  </div>
+
+  <app-loading *ngIf="this.flag"></app-loading>
+
+  <app-tarjetas *ngIf="!this.flag" [items]="this.artistas"></app-tarjetas>
+</nav>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "LFRRspotify"
+    }
+  },
+  "defaultProject": "LFRRspotify",
+  "cli": {
+    "analytics": "4fd826ed-2637-4624-8e9f-c9ab90f04939"
+  }
 }
